@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const valor1 = parseInt(prompt("Digite o primeiro valor inteiro:"));
+        const valor2 = parseInt(prompt("Digite o segundo valor inteiro:"));
+        const operacao = parseInt(prompt("Escolha a operação:\n1. Adição\n2. Subtração\n3. Divisão\n4. Multiplicação"));
+        let resultado;
+
+        switch (operacao) {
+            case 1:
+                resultado = valor1 + valor2;
+                break;
+            case 2:
+                resultado = valor1 - valor2;
+                break;
+            case 3:
+                resultado = valor1 / valor2;
+                break;
+            case 4:
+                resultado = valor1 * valor2;
+                break;
+            default:
+                console.log("Operação inválida. Por favor, escolha uma operação válida (1 a 4).");
+        }
+
+        document.writeln(`Resultado da operação: ${resultado}`);
+    </script>
+</body>
+</html>

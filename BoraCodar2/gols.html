@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vencedor Libertadores</title>
+</head>
+<body>
+    <script>
+        function lerGols() {
+            const golsCorinthians = parseInt(prompt("Digite o número de gols marcados pelo Corinthians:"));
+            const golsPalmeiras = parseInt(prompt("Digite o número de gols marcados pelo Palmeiras:"));
+        
+            return { corinthians: golsCorinthians, palmeiras: golsPalmeiras };
+        }
+        
+        function determinarVencedor(gols) {
+            if (gols.corinthians > gols.palmeiras) {
+                return "Corinthians";
+            } else if (gols.palmeiras > gols.corinthians) {
+                return "Palmeiras";
+            } else {
+                return "EMPATE";
+            }
+        }
+        
+        const golsMarcados = lerGols();
+        const vencedor = determinarVencedor(golsMarcados);
+        
+        document.writeln(`O vencedor da final da Libertadores é: ${vencedor}`);
+    </script>
+</body>
+</html>

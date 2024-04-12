@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const numLados = parseInt(prompt("Digite o número de lados do polígono:"));
+        const medidaLado = parseFloat(prompt("Digite a medida do lado do polígono (em cm):"));
+
+        let resultado;
+
+        if (numLados === 3) {
+            resultado = (medidaLado * medidaLado * Math.sqrt(3)) / 4;
+            document.writeln(`TRIÂNGULO: Área = ${resultado.toFixed(2)} cm²`);
+        } else if (numLados === 4) {
+            resultado = medidaLado * medidaLado;
+            document.writeln(`QUADRADO: Área = ${resultado.toFixed(2)} cm²`);
+        } else if (numLados === 5) {
+            document.writeln("PENTÁGONO");
+        } else if (numLados < 3) {
+            document.writeln("NÃO É UM POLÍGONO");
+        } else if (numLados > 5) {
+            document.writeln("POLÍGONO NÃO IDENTIFICADO");
+        }
+
+    </script>
+</body>
+</html>

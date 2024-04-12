@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maçãs</title>
+</head>
+<body>
+    <script>
+        function calcularCustoMacas(numeroDeMacas) {
+            const precoMenosDeDoze = 3.50;
+            const precoPeloMenosDoze = 2.50;
+            let custoTotal;
+
+            if (numeroDeMacas <= 12) {
+                custoTotal = numeroDeMacas * precoMenosDeDoze;
+            } else {
+                custoTotal = numeroDeMacas * precoPeloMenosDoze;
+            }
+            return custoTotal;
+        }
+
+        const numeroDeMacasCompradas = parseInt(prompt("Digite o número de maçãs compradas:"));
+        const custoTotalDaCompra = calcularCustoMacas(numeroDeMacasCompradas);
+
+        document.writeln(`O valor total da compra é R$ ${custoTotalDaCompra.toFixed(2)}`);
+    </script>
+</body>
+</html>
